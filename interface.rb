@@ -1,4 +1,4 @@
-require_relative 'game'
+require_relative './models/game.rb'
 
 puts 'Welcome'
 puts "Let's play Tic, Tac, Toe"
