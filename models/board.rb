@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require_relative '../views/view'
 
+# This class is responsible for creating a board
 class Board
   def initialize
     @cells = build_board

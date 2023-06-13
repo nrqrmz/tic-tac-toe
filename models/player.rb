@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# This class is responsible for creating a player
 class Player
   attr_reader :name, :symbol
 

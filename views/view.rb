@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# This class is responsible for creating a view to display the game and get user inputs
 class View
   def print_message(smth)
     puts smth

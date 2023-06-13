@@ -1,7 +1,11 @@
+# frozen_string_literal: true
+
 require_relative 'player'
 require_relative 'board'
 require_relative '../views/view'
 
+
+# This class is responsible for the game logic
 class Game
   attr_reader :running
 
