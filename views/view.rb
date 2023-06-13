@@ -6,9 +6,17 @@ class View
     puts smth
   end
 
-  # def get_input
+  def get_player_input(player_name)
+    puts "Please pick a number, #{player_name}"
+    print '> '
+    gets.chomp
+  end
 
-  # end
+  def already_taken(cells)
+    puts 'This one is already taken'
+    puts 'Pick another one...'
+    display_board(cells)
+  end
 
   def display_board(cells)
     arr = []
