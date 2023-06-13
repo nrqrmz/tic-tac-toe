@@ -12,3 +12,4 @@ print '> '
 player2 = Player.new(gets.chomp.capitalize, 'O')
 game = Game.new(player1, player2)
 game.play
+

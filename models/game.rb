@@ -53,8 +53,8 @@ class Game
 
   # this method is called when the user input is not a number
   def input_is_not_a_number(player)
-    puts 'Please enter a valid number'
     @view.display_board(@board.cells)
+    puts 'Please enter a valid number'
     player_turn(player)
   end
 

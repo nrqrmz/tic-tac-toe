@@ -13,12 +13,13 @@ class View
   end
 
   def already_taken(cells)
+    display_board(cells)
     puts 'This one is already taken'
     puts 'Pick another one...'
-    display_board(cells)
   end
 
   def display_board(cells)
+    print `clear`
     arr = []
     cells.each_slice(3) { |tri| arr << tri }
     arr.each { |line| puts line.join(' ') }
