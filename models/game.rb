@@ -16,11 +16,12 @@ class Game
     @view = View.new
     @turns = 0
     @running = @board.valid_board
+    @default_draw = true
   end
 
   def play
     @turns.even? ? player_turn(@player1) : player_turn(@player2) while @running && @turns < 9
-    @view.print_message("It's a draw.\nGame over!")
+    @view.print_message("It's a draw.\nGame over!") unless @board.valid_board
   end
 
   private
@@ -49,6 +50,7 @@ class Game
     @view.display_board(@board.cells)
     @view.print_message("#{player.name} wins!") if check_winner(player.symbol)
     @running = false if check_winner(player.symbol)
+    @default_draw = false if check_winner(player.symbol)
   end
 
   # this method is called when the user input is not a number
