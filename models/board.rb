@@ -1,12 +1,11 @@
+require_relative '../views/view'
+
 class Board
   def initialize
     @cells = build_board
-  end
+    @view = View.new
 
-  def display_board
-    arr = []
-    @cells.each_slice(3) { |tri| arr << tri }
-    arr.each { |line| puts line.join(' ') }
+    @view.display_board(@cells)
   end
 
   def valid_board

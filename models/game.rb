@@ -1,5 +1,6 @@
 require_relative 'player'
 require_relative 'board'
+require_relative '../views/view'
 
 class Game
   attr_reader :running
@@ -8,16 +9,15 @@ class Game
     @player1 = player1
     @player2 = player2
     @board = Board.new
+    @view = View.new
     @turns = 0
     @running = @board.valid_board
-
-    @board.display_board
   end
 
-  # def play
-  #   @turns.even? ? mark_space(@player1) : mark_space(@player2) while @running
-  #   puts 'Game over!'
-  # end
+  def play
+    # @turns.even? ? mark_space(@player1) : mark_space(@player2) while @running
+    @view.print_message('Game over!')
+  end
 
   # private
 
@@ -43,6 +43,3 @@ class Game
   #   end
   # end
 end
-
-game = Game.new(Player.new('merlin', 'x'), Player.new('escanor', 'o'))
-
