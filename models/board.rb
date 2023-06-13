@@ -19,8 +19,6 @@ class Board
 
   private
 
-  
-
   def build_board
     (1..9).to_a
   end
